@@ -109,3 +109,9 @@ func ValidateAppeal(appeal Appeal, inspection Inspection, now time.Time) error {
 	}
 	return nil
 }
+
+func brothTraceSnapshot(batch BrothBatch) BrothBatch {
+	clone := batch
+	clone.BoneLotIDs = nil
+	return clone
+}
