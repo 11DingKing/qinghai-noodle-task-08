@@ -40,8 +40,6 @@ func (s *Service) CheckTransfer(_ context.Context, license BrandLicense, current
 }
 
 func (s *Service) CheckBroth(_ context.Context, batch BrothBatch, lots map[string]IngredientLot) error {
-	batch = brothTraceSnapshot(batch)
-
 	return ValidateBrothBatch(batch, lots)
 }
 
